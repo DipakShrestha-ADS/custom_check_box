@@ -1,6 +1,6 @@
 # custom_check_box
 
-A new Flutter package project.
+A custom flutter check box with custom active and inactive color & icon with custom corner radius.
 
 ## Getting Started
 
