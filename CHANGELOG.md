@@ -7,4 +7,4 @@
 
 ## [0.0.3] - 2021-06-24
 
-* Migrate to null-safety.
+* Migrated to null-safety.
