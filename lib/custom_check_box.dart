@@ -17,6 +17,7 @@ class CustomCheckBox extends StatefulWidget {
   final bool shouldShowBorder;
   final Color? borderColor;
   final double? borderRadius;
+  final double? splashRadius;
 
   const CustomCheckBox({
     Key? key,
@@ -33,6 +34,7 @@ class CustomCheckBox extends StatefulWidget {
     this.shouldShowBorder = false,
     this.borderColor,
     this.borderRadius,
+    this.splashRadius,
   }) : super(key: key);
 
   @override
@@ -101,6 +103,7 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
         iconData,
         color: iconColor,
         size: widget.checkBoxSize ?? 18,
+        
       ),
     );
   }
@@ -110,6 +113,7 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
     return IconButton(
       icon: _buildIcon(),
       onPressed: () => widget.onChanged(!_checked),
+      splashRadius: widget.splashRadius,
     );
   }
 }
