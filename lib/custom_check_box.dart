@@ -103,7 +103,6 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
         iconData,
         color: iconColor,
         size: widget.checkBoxSize ?? 18,
-        
       ),
     );
   }
