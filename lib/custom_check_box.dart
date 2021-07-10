@@ -18,6 +18,9 @@ class CustomCheckBox extends StatefulWidget {
   final Color? borderColor;
   final double? borderRadius;
   final double? splashRadius;
+  final Color? splashColor;
+  final String? tooltip;
+  final MouseCursor? mouseCursors;
 
   const CustomCheckBox({
     Key? key,
@@ -35,6 +38,9 @@ class CustomCheckBox extends StatefulWidget {
     this.borderColor,
     this.borderRadius,
     this.splashRadius,
+    this.splashColor,
+    this.tooltip,
+    this.mouseCursors,
   }) : super(key: key);
 
   @override
@@ -108,6 +114,9 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
       icon: _buildIcon(),
       onPressed: () => widget.onChanged(!_checked),
       splashRadius: widget.splashRadius,
+      splashColor: widget.splashColor,
+      tooltip: widget.tooltip,
+      mouseCursor: widget.mouseCursors ?? SystemMouseCursors.click,
     );
   }
 }

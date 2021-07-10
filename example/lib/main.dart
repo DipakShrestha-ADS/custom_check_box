@@ -92,6 +92,9 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             CustomCheckBox(
               value: shouldCheckDefault,
+              splashColor: Colors.red.withOpacity(0.4),
+              tooltip: 'Custom Check Box',
+              splashRadius: 40,
               onChanged: (val) {
                 //do your stuff here
                 setState(() {
