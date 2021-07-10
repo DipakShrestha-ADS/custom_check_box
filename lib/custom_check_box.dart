@@ -86,14 +86,9 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
       padding: EdgeInsets.zero,
       decoration: BoxDecoration(
         color: fillColor,
-        borderRadius:
-        BorderRadius.all(Radius.circular(widget.borderRadius ?? 6)),
+        borderRadius: BorderRadius.all(Radius.circular(widget.borderRadius ?? 6)),
         border: Border.all(
-          color: widget.shouldShowBorder
-              ? (widget.borderColor ?? Colors.teal.withOpacity(0.6))
-              : (!widget.value
-              ? (widget.borderColor ?? Colors.teal.withOpacity(0.6))
-              : Colors.transparent),
+          color: widget.shouldShowBorder ? (widget.borderColor ?? Colors.teal.withOpacity(0.6)) : (!widget.value ? (widget.borderColor ?? Colors.teal.withOpacity(0.6)) : Colors.transparent),
           width: widget.shouldShowBorder ? widget.borderWidth ?? 2.0 : 1.0,
         ),
       ),
@@ -118,4 +113,3 @@ enum CheckStatus {
   checked,
   unchecked,
 }
-
