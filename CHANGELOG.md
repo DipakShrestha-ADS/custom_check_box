@@ -8,3 +8,7 @@
 ## [0.0.3] - 2021-06-24
 
 * Migrated to null-safety.
+
+## [0.0.4] - 2021-07-11
+
+* Added custom splash color & radius, tooltip and mouse cursor.
