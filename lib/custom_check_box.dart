@@ -21,8 +21,8 @@ class CustomCheckBox extends StatefulWidget {
   final Color? splashColor;
   final String? tooltip;
   final MouseCursor? mouseCursors;
-  final double width;
-  final double height;
+  final double? width;
+  final double? height;
 
   const CustomCheckBox({
     Key? key,
