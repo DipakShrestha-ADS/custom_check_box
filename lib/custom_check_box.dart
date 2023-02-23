@@ -13,7 +13,7 @@ class CustomCheckBox extends StatefulWidget {
   final Color uncheckedFillColor;
   final IconData uncheckedIcon;
   final double? borderWidth;
-  final double? checkBoxSize;
+  final double? checkBoxIconSize;
   final bool shouldShowBorder;
   final Color? borderColor;
   final double? borderRadius;
@@ -21,6 +21,8 @@ class CustomCheckBox extends StatefulWidget {
   final Color? splashColor;
   final String? tooltip;
   final MouseCursor? mouseCursors;
+  final double width;
+  final double height;
 
   const CustomCheckBox({
     Key? key,
@@ -33,7 +35,7 @@ class CustomCheckBox extends StatefulWidget {
     this.uncheckedFillColor = Colors.white,
     this.uncheckedIcon = Icons.close,
     this.borderWidth,
-    this.checkBoxSize,
+    this.checkBoxIconSize,
     this.shouldShowBorder = false,
     this.borderColor,
     this.borderRadius,
@@ -41,6 +43,8 @@ class CustomCheckBox extends StatefulWidget {
     this.splashColor,
     this.tooltip,
     this.mouseCursors,
+    this.width,
+    this.height,
   }) : super(key: key);
 
   @override
@@ -91,19 +95,26 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
     }
 
     return Container(
+      width: widget.width,
+      height: widget.height,
       padding: EdgeInsets.zero,
       decoration: BoxDecoration(
         color: fillColor,
-        borderRadius: BorderRadius.all(Radius.circular(widget.borderRadius ?? 6)),
+        borderRadius:
+            BorderRadius.all(Radius.circular(widget.borderRadius ?? 6)),
         border: Border.all(
-          color: widget.shouldShowBorder ? (widget.borderColor ?? Colors.teal.withOpacity(0.6)) : (!widget.value ? (widget.borderColor ?? Colors.teal.withOpacity(0.6)) : Colors.transparent),
+          color: widget.shouldShowBorder
+              ? (widget.borderColor ?? Colors.teal.withOpacity(0.6))
+              : (!widget.value
+                  ? (widget.borderColor ?? Colors.teal.withOpacity(0.6))
+                  : Colors.transparent),
           width: widget.shouldShowBorder ? widget.borderWidth ?? 2.0 : 1.0,
         ),
       ),
       child: Icon(
         iconData,
         color: iconColor,
-        size: widget.checkBoxSize ?? 18,
+        size: widget.checkBoxIconSize ?? 18,
       ),
     );
   }
